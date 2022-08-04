@@ -16,3 +16,8 @@ export const navLinks = [
     }
 ]
 
+export const heroData = {
+    title: `Discover rare digital art and collect NFT’s`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum.`
+}
+
