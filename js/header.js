@@ -12,19 +12,21 @@ const linkMarkup = navLinks.map(({ label, path }) =>
 
 // console.log(linkMarkup);
 
-const navList = `<ul class="nav__link">${linkMarkup}</ul>`;
+const navList = `<ul class="nav__list">${linkMarkup}</ul>`;
 // console.log(navList);
 
 navigation.insertAdjacentHTML(`afterbegin`, navList);
 
 const headerBtn = document.createElement(`button`);
 
-headerBtn.textContent = "Buy template";
+headerBtn.textContent = "Buy Template";
 headerBtn.type = "button";
 headerBtn.classList.add("header__button");
-console.log(headerBtn);
+// console.log(headerBtn);
 
-header.insertAdjacentElement(`beforeend`, headerBtn);
+const headerContainer = document.querySelector('.header__container');
+
+headerContainer.insertAdjacentElement(`beforeend`, headerBtn);
 headerBtn.addEventListener('click', (evt) => {
     console.log('click', evt);
 });
