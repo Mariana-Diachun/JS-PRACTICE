@@ -1,0 +1,13 @@
+.nav__link {
+    display: flex;
+}
+.header__button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+}
+#navigation li {
+    padding: 10px;
+}
