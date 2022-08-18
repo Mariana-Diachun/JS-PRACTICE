@@ -1,17 +1,18 @@
+import { localize } from "../localize/i18n.js";
 export const navLinks = [
   {
     id: 1,
-    label: "Marketplace",
+    label: localize("marketplace"),
     path: "/marketplace",
   },
   {
     id: 2,
-    label: "Artists",
+    label: localize("artists"),
     path: "/artists",
   },
   {
     id: 3,
-    label: "Contact",
+    label: localize("contact"),
     path: "/contact",
   },
 ];
