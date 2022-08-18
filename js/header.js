@@ -1,14 +1,14 @@
-import myRefs from './references.js';
+import myRefs from "./references.js";
 // console.log('myRefs:', myRefs);
 const { header, navigation } = myRefs;
 // console.log(header);
 
-import { navLinks } from '../database/data.js';
+import { navLinks } from "../database/data.js";
 // console.log('navLinks:', navLinks);
 
-const linkMarkup = navLinks.map(({ label, path }) =>
-    `<li><a href="${path}">${label}</a></li>`
-).join('');
+const linkMarkup = navLinks
+  .map(({ label, path }) => `<li><a href="${path}">${label}</a></li>`)
+  .join("");
 
 // console.log(linkMarkup);
 
@@ -24,14 +24,13 @@ headerBtn.type = "button";
 headerBtn.classList.add("header__button");
 // console.log(headerBtn);
 
-const headerContainer = document.querySelector('.header__container');
+const headerContainer = document.querySelector(".header__container");
 
 headerContainer.insertAdjacentElement(`beforeend`, headerBtn);
-headerBtn.addEventListener('click', (evt) => {
-    console.log('click', evt);
+headerBtn.addEventListener("click", (evt) => {
+  console.log("click", evt);
 });
-navigation.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    console.log('nav', evt);
-}
-);
+navigation.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  console.log("nav", evt);
+});
