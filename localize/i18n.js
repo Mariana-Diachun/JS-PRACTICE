@@ -1,22 +1,14 @@
+import { en } from "./en.js"
+import { uk } from "./uk.js"
+import { de } from "./de.js"
+
 console.log(window);
 
 const availableLangs = ["uk", "en", "de"];
 const locales = {
-    uk: {
-        marketplace: "Торгівельний майданчик",
-        artists: "Артисти",
-        contact: "Контакти",
-    },
-    en: {
-        marketplace: "Marketplace",
-        artists: "Artists",
-        contact: "Contact",
-    },
-    de: {
-        marketplace: "Marktplatz",
-        artists: "Künstler",
-        contact: "Kontakte",
-    },
+    uk,
+    en,
+    de,
 }
 
 function getLang() {
