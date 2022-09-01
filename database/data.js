@@ -22,6 +22,38 @@ export const heroData = {
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum.`,
 };
 
+export const partnersData = {
+    title: 'Backed by the best',
+    description: 'Lorem ipsum dolor sit amet, consectetur dolore adipiscing elit, sed do eiusmod tempor incididunt.'
+}
+
+export const partnersLinks = [
+    {
+        id: 1,
+        label: 1,
+        path:'./1',
+    },
+       {
+        id: 2,
+        label: 2,
+        path:'./2',
+    },
+          {
+        id: 3,
+        label: 3,
+        path:'./3',
+    },
+             {
+        id: 4,
+        label: 4,
+        path:'./4',
+    },
+                {
+        id: 5,
+        label: 5,
+        path:'./5',
+    },
+]
 export const galleryItems = [
   {
     url: "https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg",
@@ -71,3 +103,4 @@ export const viewingLinks = [
     area: "Artists",
   },
 ];
+
