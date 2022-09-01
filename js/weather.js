@@ -57,6 +57,8 @@ class Weather {
       .then((city) => {
         // console.log(city.lat, city.lon);
         this.geoLocation = { lat: city.lat, lon: city.lon };
+        // console.log(this.geoLocation);
+        this.getDataByGeo();
       })
       .catch((error) => alert(error));
     // fetch(url)
@@ -77,11 +79,32 @@ class Weather {
   }
 
   getDataByGeo() {
-    const queryParams = `?lat={this.geoLocation.lat}&lon={lon}&appid={API key}`;
+    const queryParams = `?lat=${this.geoLocation.lat}&lon=${this.geoLocation.lon}&appid=${API_KEY}`;
+    const url = this.endpointData + queryParams;
+    axios
+      .get(url)
+      .then((response) => {
+        console.log(response);
+        if (response.status !== 200) {
+          throw new Error(response.statusText);
+        }
+        return response.data;
+      })
+      .then((data) => {
+        console.log(data);
+        const temp = (data.main.temp - 273.15).toFixed(2);
+        console.log("temp:", `${temp}°C`);
+        const pressure = data.main.pressure;
+        console.log("pressure:", `${pressure}mm`);
+        const humidity = data.main.humidity;
+        console.log("humidity:", `${humidity}%`);
+        const weatherData = data.weather.map((item) => {
+          console.log(item);
+        });
+      });
   }
 }
 
 const weather = new Weather();
 console.log(weather);
-
 weather.getGeoByCityName();
