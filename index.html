@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/gallery.css" />
     <link rel="stylesheet" href="./styles/weather.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
     <link
       rel="shortcut icon"
       href="https://cdn-icons-png.flaticon.com/512/6564/6564778.png"
@@ -46,6 +47,14 @@
       <section class="hero"></section>
       <!-- <section class="gallery"></section> -->
     </main>
+    <div class="is-hidden backdrop" data-modal>
+      <button class="button-close-modal" data-modal-close>
+        <svg class="icon-close">
+          <use href="./images/sprite.svg#icon-icon-close"></use>
+        </svg>
+      </button>
+      <div class="modal-open-content"></div>
+    </div>
     <script src="./index.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
   </body>

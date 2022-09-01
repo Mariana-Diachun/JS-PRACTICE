@@ -14,6 +14,7 @@ class Weather {
     //   lat: 50.4500336,
     // };
     this._geoLocation = null;
+    this._weatherData = null;
   }
 
   get cityName() {
@@ -30,6 +31,14 @@ class Weather {
 
   set geoLocation(value) {
     return (this._geoLocation = value);
+  }
+
+  get weatherData() {
+    return this._weatherData;
+  }
+
+  set weatherData(value) {
+    return (this._weatherData = value);
   }
 
   getGeoByCityName() {
@@ -64,14 +73,26 @@ class Weather {
         return response.data;
       })
       .then((data) => {
+        this.weatherData = data;
         const widgetMarkup = createWidgetPreview(data);
         refs.weather.insertAdjacentHTML("afterbegin", widgetMarkup);
-        refs.weather.addEventListener("click", this.openFullWidget);
+        refs.weather.addEventListener(
+          "click",
+          this.openFullWidget.bind(this, this.weatherData)
+        );
       });
   }
 
-  openFullWidget() {
-    //
+  openFullWidget(data) {
+    const fullWidget = createMarkup(data);
+    refs.backdrop.classList.remove("is-hidden");
+    refs.modalBtn.addEventListener("click", this.closeByBtn);
+    refs.modal.insertAdjacentHTML("afterbegin", fullWidget);
+  }
+
+  closeByBtn() {
+    refs.backdrop.classList.add("is-hidden");
+    refs.modal.innerHTML = "";
   }
 }
 
