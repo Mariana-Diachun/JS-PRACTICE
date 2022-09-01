@@ -1,0 +1,22 @@
+.hero__title {
+  margin-top: 51px;
+  margin-left: 120px;
+  width: 658px;
+  font-weight: 400;
+  font-size: 84px;
+  line-height: 1.19;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.hero__text {
+  margin-left: 120px;
+  width: 658px;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  color: #e5e5e5;
+}

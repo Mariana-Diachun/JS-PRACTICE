@@ -1,0 +1,16 @@
+.viewing__button {
+  font-family: "Paytone One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.38;
+
+  letter-spacing: 1px;
+
+  color: #ffffff;
+
+  background-color: transparent;
+  border: transparent;
+  margin-left: 218px;
+  width: 267px;
+}
